@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROUPING TAGS</title>
+    <style>
+        body {
+           background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+           background-attachment: fixed;
+        }
+        header {
+            background-color: rgb(150, 150, 212);
+            border-radius: 20px  / 30px 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+            width: auto;
+            height: auto;
+            box-shadow:  2px 2px 4px 1px rgba(0, 0, 0, 0.195);
+        }
+        nav {
+            background-color: aliceblue;
+            border-radius: 40px;
+            padding: 5px;
+            margin: 2px;
+            box-shadow:  2px 2px 4px 1px rgba(0, 0, 0, 0.195);
+
+        }
+
+        nav > a {
+            text-decoration: none;
+            font-weight: bolder;
+            margin-right: 20px;
+      
+        }
+        nav > a:hover {
+        text-decoration-line: underline overline;
+        text-decoration-color: rgb(2, 87, 25);
+        text-decoration-style:  inherit;
+        text-decoration-thickness: 2px;
+        text-decoration-skip-ink: auto;
+        }
+        main {
+        background-color: rgb(63, 63, 135);
+            border-radius: 10px;
+            border: 2px solid black;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            gap: 10px; 
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+       }
+       section {
+        background-color: rgb(190, 221, 15);
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            flex: 3;
+            margin: 10px;
+            padding: 10px;
+       }
+       article {
+        background-color: rgb(6, 132, 12);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+       }
+
+       aside {
+        flex: 1; 
+        background-color: #bb1919;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+       }
+
+       footer {
+        background-color: rgb(84, 8, 65);
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+       }
+       article > aside:hover {
+        background-color: blueviolet;
+       }
+       main > aside:hover {
+        background-color: blueviolet;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portal de Notícias</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Política</a>
+            <a href="#">Tecnologia</a>
+            <a href="#">Esportes</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article id="assuntos">
+                <h2>Assuntos em alta</h2>
+                <ul>
+                    <li>Inteligência Artificial</li>
+                    <li>Eleição 2025</li>
+                    <li>Campeonato Brasileiro</li>
+                    <li>Investimentos</li>
+                </ul>
+            </article>
+
+            <article id="noticias">
+                <h2>Últimas Notícias</h2>
+                <p>Hoje foi anunciado um novo projeto de lei para regulamentar o uso da IA no Brasil...</p>
+                <aside> 
+                    <p><strong>Autor:</strong> João Silva</p>
+                    <p><strong>Publicado em:</strong> 19 de maio de 2025</p>
+                </aside>
+            </article>
+        </section>
+        <aside>
+            <h3>Publicidade</h3>
+            <p>Curso de HTML e CSS com certificado! Aproveite a promoção.</p>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 Portal de Notícias. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

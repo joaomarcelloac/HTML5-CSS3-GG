@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.page-header {
+    background-color: #007bff;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.page-header h1 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.page-header p {
+    font-size: 1.1em;
+}
+
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.content section {
+    margin-bottom: 40px;
+}
+
+.content h2 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* =========================================== */
+/* === ESTILOS PARA O BOTÃO VOLTAR AO TOPO === */
+/* =========================================== */
+.scroll-to-top {
+    /* PASSO 1: Torna o botão FIXO na janela de visualização */
+    position: fixed; 
+
+    /* PASSO 2: Posicione-o em relação à janela de visualização */
+    bottom: 25px; /* 20px da borda inferior da tela */
+    right: 20px;  /* 20px da borda direita da tela */
+
+    /* Estilos visuais */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Faz o botão ser redondo */
+    width: 50px;
+    height: 50px;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+
+    /* ESCONDER POR PADRÃO (será mostrado via JavaScript) */
+    opacity: 0; /* Esconde o botão */
+    pointer-events: none; /* Impede que ele seja clicável quando invisível */
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
+
+/* Classe para mostrar o botão (adicionada/removida por JS) */
+.scroll-to-top.show {
+    opacity: 1;
+    pointer-events: auto; /* Torna-o clicável novamente */
+}

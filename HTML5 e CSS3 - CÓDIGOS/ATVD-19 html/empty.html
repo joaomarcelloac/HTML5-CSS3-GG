@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de :empty</title>
+  <style>
+    div {
+      width: 200px;
+      height: 60px;
+      border: 2px solid gray;
+      margin: 10px;
+      padding: 10px;
+      background-color: #eee;
+
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    }
+
+    div:empty {
+      background-color: rgb(240, 128, 128);
+      border: 2px dashed red;
+    }
+
+    div > p {
+      display: none;
+    
+      font: bolder 25px Arial;
+    }
+    div:hover > p {
+      color: red;
+      display: block;
+    }
+    div:active > p {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Exemplo de uso do :empty</h2>
+
+  <div>Com conteúdo</div>
+
+  <div></div>
+
+  <div><p>Outro conteúdo</p></div>
+
+  <div></div>
+
+</body>
+</html>

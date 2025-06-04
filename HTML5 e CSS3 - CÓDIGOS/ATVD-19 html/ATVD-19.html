@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+div { 
+    display: inline-flex ;
+    background-color: lab(84.85% 2.05 -5.42);
+    text-align: center;
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 30px;
+    box-shadow:2px 2px 30px #314156;
+    
+}
+p::first-letter {
+  font-size: 200%;
+  color: darkblue;
+}
+
+div:hover {
+    background-color: blueviolet;
+}
+div > p {
+    display: none;
+    color: black;
+}
+div:hover > p {
+    display: block;
+}
+div:active {
+    background-color: rgb(227, 20, 141);
+}
+
+    </style>
+</head>
+<body>
+    <div id="d1">
+        01
+        <p>JOÃO MARCELLO</p>
+    </div>
+    <div id="d2">
+        02 
+        <p>LORENA GOMES</p>
+    </div>
+    <div id="d3">
+        03
+        <P>MARIANA CAMÊLO</P>
+    </div>
+</body>
+</html>

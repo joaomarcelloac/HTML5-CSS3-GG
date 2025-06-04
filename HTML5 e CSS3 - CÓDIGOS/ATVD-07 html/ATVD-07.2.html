@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<body>
+    <h1>Tabelas</h1>
+    <h2>O que é uma tabela em HTML?</h2>
+    <p>Uma tabela em HTML é uma estrutura usada para organizar dados em linhas e colunas, semelhante a uma planilha. Ela é composta por células, que são os "blocos" onde os dados são inseridos. As tabelas são muito úteis para exibir informações tabulares, como listas de produtos, horários, dados financeiros, etc.</p>
+    <h2>Estrutura básica de uma tabela</h2>
+    <p>A estrutura básica de uma tabela em HTML é composta por três principais tags:</p>
+    <p>&cir; &lt;table&gt;: Define o início e o fim da tabela.</p>
+    <p>&cir;&lt;tr&gt;: Define uma linha (table row) na tabela.</p>
+    <p>&cir;&lt;td&gt;: Define uma célula de dados (table data) dentro de uma linha.</p>
+    <p>ex:</p>
+    <table border="2">
+        <tr>
+          <td>Linha 1, Coluna 1</td>
+          <td>Linha 1, Coluna 2</td>
+        </tr>
+        <tr>
+          <td>Linha 2, Coluna 1</td>
+          <td>Linha 2, Coluna 2</td>
+        </tr>
+      </table>
+
+      <p>No editor de código: </p>
+<pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Linha 1, Coluna 1&lt;/td&gt;
+        &lt;td&gt;Linha 1, Coluna 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Linha 2, Coluna 1&lt;/td&gt;
+        &lt;td&gt;Linha 2, Coluna 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;    
+</pre>
+<h2>Cabeçalho da tabela</h2>
+<p>Para adicionar um cabeçalho à tabela, usamos a tag &lt;th&gt;. O texto dentro de &lt;th&gt; é geralmente exibido em negrito e centralizado.</p>
+
+<p>ex:</p>
+<table border="2">
+<tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>Cidade</th>
+</tr>
+<tr>
+    <td>João</td>
+    <td>25</td>
+    <td>São Paulo</td>
+</tr>
+<tr>
+    <td>Maria</td>
+    <td>30</td>
+    <td>Rio de Janeiro</td>
+</tr>
+</table>
+
+  <p>No editor de código:</p>
+  <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nome&lt;/th&gt;
+      &lt;th&gt;Idade&lt;/th&gt;
+      &lt;th&gt;Cidade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;João&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;São Paulo&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Maria&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;Rio de Janeiro&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+  </pre>
+
+  <h2>colspan (Mesclar Colunas)</h2>
+  <p>O atributo colspan é usado dentro das tags &lt;th&gt;ou  &lt;td&gt;para fazer uma célula ocupar várias colunas.</p>
+  <p>Exemplo: Mesclando colunas para um título centralizado</p>
+  
+  <table border="2">
+      <tr>
+          <th colspan="3">Título da Tabela</th>
+      </tr>
+      <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <th>Cidade</th>
+      </tr>
+      <tr>
+          <td>João</td>
+          <td>25</td>
+          <td>São Paulo</td>
+      </tr>
+  </table>
+  
+  <p>No editor de código:</p>
+  <pre>
+    &lt;table border=&quot;2&quot;&gt;
+      &lt;tr&gt;
+          &lt;th colspan=&quot;3&quot;&gt;Título da Tabela&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Nome&lt;/th&gt;
+          &lt;th&gt;Idade&lt;/th&gt;
+          &lt;th&gt;Cidade&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;João&lt;/td&gt;
+          &lt;td&gt;25&lt;/td&gt;
+          &lt;td&gt;São Paulo&lt;/td&gt;
+      &lt;/tr&gt;
+&lt;/table&gt;
+
+  </pre>
+  
+  <p>Explicação:</p>
+  <p>&cir; O colspan="3" faz com que a célula do título ocupe três colunas , centralizando a informação.</p>
+  <p>&cir; Isso é útil para criar cabeçalhos que se estendem por várias colunas.</p>
+  <br>
+
+  <h2>width (Largura da Tabela ou Célula)</h2>
+  <p>O atributo width define a largura da tabela inteira ou de uma célula individual.</p>
+  <p>Exemplo: Definindo a largura da tabela</p>
+
+  <table border="2" width="500">
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cidade</th>
+    </tr>
+    <tr>
+        <td>João</td>
+        <td>25</td>
+        <td>São Paulo</td>
+    </tr>
+</table>
+
+<p>No editor de código:</p>
+<pre>
+    &lt;table border=&quot;2&quot; width=&quot;500&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;th&gt;Idade&lt;/th&gt;
+        &lt;th&gt;Cidade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;João&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;São Paulo&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+</pre>
+
+<p>Explicação:</p>
+<p>&cir; width="500"→ Defina que a largura total da tabela será de 500 pixels .</p>
+
+<p>Exemplo: Definindo a largura de uma célula</p>
+
+<table border="2">
+    <tr>
+        <th width="200">Nome</th>
+        <th width="100">Idade</th>
+        <th width="150">Cidade</th>
+    </tr>
+    <tr>
+        <td>João</td>
+        <td>25</td>
+        <td>São Paulo</td>
+    </tr>
+</table>
+
+<p>No editor de código:</p>
+<pre>
+    &lt;table border=&quot;2&quot;&gt;
+    &lt;tr&gt;
+        &lt;th width=&quot;200&quot;&gt;Nome&lt;/th&gt;
+        &lt;th width=&quot;100&quot;&gt;Idade&lt;/th&gt;
+        &lt;th width=&quot;150&quot;&gt;Cidade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;João&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;São Paulo&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+</pre>
+
+<p>Explicação:</p>
+<p>&cir; A célula “Nome” terá 200 pixels de largura.</p>
+<p>&cir; A célula “Idade” terá 100 pixels.</p>
+<p>&cir; A célula “Cidade” terá 150 pixels.</p>
+
+
+<h2>height (Altura da Tabela ou Célula)</h2>
+<p>O atributo heightdefine a altura da tabela ou de células individuais.</p>
+<p>Exemplo: Definindo a altura da tabela</p>
+
+<table border="2" width="300" height="200">
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+    </tr>
+    <tr>
+        <td>João</td>
+        <td>25</td>
+    </tr>
+</table>
+
+<p>No editor de código:</p>
+<pre>
+    &lt;table border=&quot;2&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;th&gt;Idade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;João&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+</pre>
+
+<p>Explicação:</p>
+<p>&cir; height="200"→ A altura total da tabela será de 200 pixels .</p>
+
+<p>Exemplo: Definindo a altura de uma célula</p>
+
+<table border="2">
+    <tr>
+        <th height="50">Nome</th>
+        <th height="50">Idade</th>
+    </tr>
+    <tr>
+        <td>João</td>
+        <td>25</td>
+    </tr>
+</table>
+
+<p>No editor de código:</p>
+<pre>
+    &lt;table border=&quot;2&quot;&gt;
+    &lt;tr&gt;
+        &lt;th height=&quot;50&quot;&gt;Nome&lt;/th&gt;
+        &lt;th height=&quot;50&quot;&gt;Idade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;João&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+</pre>
+
+<p>Explicação:</p>
+<p>&cir; height="50"→ Defina que a altura das células da primeira linha será de 50 pixels .</p>
+<br>
+
+<p><strong>OBS:</strong> Quando você tem uma tabela em HTML com células vazias (&lt;td&gt; &lt;/td&gt;), o navegador pode tentar ajustar automaticamente o layout, o que pode fazer com que a tabela "colapse" ou perca a largura esperada. Para evitar isso, uma solução é adicionar um espaço não quebrável ( &amp;nbsp; ) dentro das células vazias. Isso garante que a célula tenha um conteúdo, mesmo que seja invisível, evitando que o navegador ajuste o tamanho da tabela de forma inesperada. </p>
+
+<br>
+<h3>Exercécios de fixação</h3>
+<p>Crie uma tabela que represente 3 meses do calendário de 2025.</p>
+
+<table border="2" width="400" height="300">
+    <tr>
+        <th colspan="7">FEVEREIRO</th>
+    </tr>
+    <tr>
+        <th width="50" height="50">Domingo</th>
+        <th width="50" height="50">Segunda</th>
+        <th width="50" height="50">Terça</th>
+        <th width="50" height="50">Quarta</th>
+        <th width="50" height="50">Quinta</th>
+        <th width="50" height="50">Sexta</th>
+        <th width="50" height="50">Sábado</th>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<br>
+<table border="2" width="400" height="300" align="center" style="border: 2px solid blue;">
+    <tr>
+        <th colspan="7">MARÇO</th>
+    </tr>
+    <tr>
+        <th width="50" height="50" abbr="domingo">Domingo</th>
+        <th width="50" height="50">Segunda</th>
+        <th width="50" height="50">Terça</th>
+        <th width="50" height="50">Quarta</th>
+        <th width="50" height="50">Quinta</th>
+        <th width="50" height="50">Sexta</th>
+        <th width="50" height="50">Sábado</th>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td align="center">1</td>
+    </tr>
+    <tr>
+        <td align="center">2</td>
+        <td align="center">3</td>
+        <td align="center">4</td>
+        <td align="center">6</td>
+        <td align="center">7</td>
+        <td align="center">8</td>
+        <td align="center">9</td>
+    </tr>
+    <tr>
+        <td align="center">10</td>
+        <td align="center">11</td>
+        <td align="center">12</td>
+        <td align="center">13</td>
+        <td align="center">14</td>
+        <td align="center">15</td>
+        <td align="center">16</td>
+    </tr>
+    <tr>
+        <td align="center">17</td>
+        <td align="center">18</td>
+        <td align="center">19</td>
+        <td align="center">20</td>
+        <td align="center">21</td>
+        <td align="center">22</td>
+        <td align="center">23</td>
+    </tr>
+    <tr>
+        <td align="center">24</td>
+        <td align="center">25</td>
+        <td align="center">26</td>
+        <td align="center">27</td>
+        <td align="center">28</td>
+        <td align="center">29</td>
+        <td align="center">30</td>
+    </tr>
+    <tr>
+        <td align="center">31</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>   
+</table>
+<br>
+
+<table border="2" align="center" width="400" height="300" style="border: 2px solid blue;"> 
+    <tr>
+        <th colspan="7">ABRIL</th>
+    </tr>
+    <tr>
+        <th width="50" height="50">Domingo</th>
+        <th width="50" height="50">Segunda</th>
+        <th width="50" height="50">Terça</th>
+        <th width="50" height="50">Quarta</th>
+        <th width="50" height="50">Quinta</th>
+        <th width="50" height="50">Sexta</th>
+        <th width="50" height="50">Sábado</th>
+    </tr>
+    <tr>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+    </tr>
+    <tr>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+    </tr>
+    <tr>
+        <th>13</th>
+        <th>14</th>
+        <th>15</th>
+        <th>16</th>
+        <th>17</th>
+        <th>18</th>
+        <th>19</th>
+    </tr>
+    <tr>
+        <th>20</th>
+        <th>21</th>
+        <th>22</th>
+        <th>23</th>
+        <th>24</th>
+        <th>25</th>
+        <th>26</th>
+    </tr>
+    <tr>
+        <th>27</th>
+        <th>28</th>
+        <th>29</th>
+        <th>30</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+
+<table border="2" cellpadding="90" cellspacing="10" align="center" role="table">
+    <tr>
+        <th colspan="2">texto</th>
+
+    </tr>
+    <tr>
+        <td >Texto</td>
+        <td >Texto</td>
+    </tr>
+    <tr>
+        <th abbr="Hypertext Markup Language">HTML</th>
+        <td title="Cascading Style Sheets">CSS</td>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<table border="2" align="center" style="border: 2px solid red;">
+    <tr>
+        <th colspan="5" rowspan="">CRONOGRAMA</th>
+    </tr>
+    <tr >
+        <th>DIA 1</th>
+        <th>DIA 2</th>
+        <th>DIA 3</th>
+        <th>DIA 4</th>
+        <th>DIA 5</th>
+    </tr>
+    <tr>
+        <td>SURF</td>
+        <td>ACADEMIA</td>
+        <td>CROSSFIT</td>
+        <td rowspan="3">CALISTENIA</td>
+        <td>TÊNIS</td>
+    </tr>
+    <tr>
+        <td>ACADEMIA</td>
+        <td>CROSSFIT</td>
+        <td>TÊNIS</td>
+       
+        <td>SURF</td>
+    </tr>
+    <tr>
+        <td>SURF</td>
+        <td>ACADEMIA</td>
+        <td>CROSSFIT</td>
+        
+        <td>TÊNIS</td>
+    </tr>
+</table>
+
+<table border="1">
+    <tr>
+        <th>Horário</th>
+        <th>Segunda</th>
+        <th>Terça</th>
+    </tr>
+    <tr>
+        <td>08:00 - 09:00</td>
+        <td rowspan="2">Matemática</td> <!-- Ocupa duas linhas -->
+        <td>História</td>
+    </tr>
+    <tr>
+        <td>09:00 - 10:00</td>
+        <td>Geografia</td>
+    </tr>
+</table>
+
+<p>Lorem <abbr title="gaygaygay">ipsum</abbr> dolor sit amet consectetur adipisicing elit. Corporis doloribus, autem magnam accusamus cupiditate dolorem sed alias consequatur debitis ipsa qui laudantium nulla, deserunt, suscipit facere aspernatur corrupti. At, ullam.</p>
+</body>
+</html

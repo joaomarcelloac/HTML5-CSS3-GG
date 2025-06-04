@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>hyperlinks</h1>
+    <h2>Usando links externos</h2>
+    <p>A tag &lt;a&gt; em HTML é usada para cria++++r hiperlinks , permitindo que os usuários naveguem para outras páginas, contidas dentro da mesma página ou até façam o download de arquivos.
+    <p>Estrutura básica do &lt;a&gt; (Âncora):</p>
+<pre>
+    &lt;a href=&quot;https://www.exemplo.com&quot;&gt;Clique aqui&lt;/a&gt;
+</pre>
+<a href=""></a>
+    <p>ex:</p>
+    </p>
+    <p>&cir;Você pode acessar o meu <a href="">repositório público no GitHub</a></p>
+    <p>&cir;Você tambem pode acessar meu <a href="">canal gratuíto no Youtube</a></p>
+    <h3>Atributos Importantes para Links Externos</h3>
+    <p>target="_blank": Abra o link em uma nova aba do navegador.</p>
+    <p>rel="noopener"(Segurança para target="_blank"): Evite vulnerabilidades em que o site externo possa manipular a página original.</p>
+    <p>rel="noreferrer"(Privacidade): O site de destino não obtém informações sobre de onde o usuário veio.</p>
+    <p>rel="nofollow"(SEO): ndica que o link não deve ser seguido pelos buscadores , usado para links pagos ou patrocinados .</p>
+    <p>rel="external"(Indica que o link é externo): Diz ao navegador que o link aponta para um site externo. </p>
+    <p>Dica: Use target="_blank" sempre com rel="noopener noreferrer" para manter segurança e privacidade</p>
+    <br>
+
+    <h2>Abrir o conteúdo do link em uma nova aba ou janela, sem que o usuário saia do site atual</h2>
+
+    <p>Por padrão, sempre que um visitante clica em um <i>hyperlink</i>, o site de destino abre na mesma janela do site que continha esse link. Ou seja, o conteúdo anterior vai deixar de ser exibido para mostrar o novo conteúdo.</p>
+    <p>Esse é um comportamento desejado quando o visitante vai continuar a visitar o nosso site, apenas mudando de um documento para o outro. Mas e quanddo um clique leva o visitante para o outro site e provavelmente ele nunca mais voltara ao nosso site?</p>
+    <p>Para poder controlar onde o site de destino vai abrir, podemos usar o atributo <code style="color: blue;">target</code>, que suporta os seguintes valores: </p>
+    <p><code>_blank</code>: Vai abrir o link em uma nova janela em branco.</p>
+    <p><code>_self</code>: Vai abrir o link na janela ou frame atual (padrão).</p>
+    <p><code>_top</code>: Vai desfazer todos os frames e abrir o destino no navegador completo. </p>
+    <p><code>_parent</code>: Similar ao uso do <code>_top</code> em uma referência à janela mãe </p>
+    <p><code>nome-do-frame</code>: Caso esteja usando frames, indicar o nome da janela a abrir.</p>
+    <p>ex:</p>
+    <p>Você pode acessar o meu <a href="#"target='_blank' rel="externos">repositório público no GitHub</a>.</p>
+    <p>No editor de código:</p>
+
+<pre>
+    &lt;p&gt;Você pode acessar o meu &lt;a href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;externos&quot;&gt;repositório público no GitHub&lt;/a&gt;.&lt;/p&gt;
+</pre>
+    
+<h2>Atributo rel (relacionamento)</h2>
+<p>O atributo rel(relacionamento) no elemento &lt;a&gt; define o relacionamento entre a página atual e a página para a qual o link aponta. Ele ajuda na navegação, SEO e segurança.</p>
+<h3>Valores do atributo <code>rel</code> na tag &lt;a&gt;</h3>
+<p><code>next</code>: Indica que o link é para a próxima parte do documento atual.</p>
+<p><code>prev</code>: Indica que o link é para a parte anterior do documento atual.</p>
+<p><code>author</code>: Indica que é um link para o site do autor do artigo atual.</p>
+<p><code>external</code>: Indica que é um link para outro site que não faz parte do site atual.</p>
+<p><code>nofollow</code>: Indica que é um link para um site não endossado, como um link pago.</p>
+<p><code>alternate</code>: Indica uma versão alternativa do documento atual (exemplo: outra língua ou formato).</p>
+<p><code>bookmark</code>: Define um link como um marcador dentro do documento.</p>
+<p><code>help</code>: Indica que o link leva para uma página de ajuda ou documentação.</p>
+<p><code>license</code>: Define um link que aponta para a licença do documento.</p>
+<p><code>noopener</code>: Impede que a nova página tenha acesso ao objeto <code>window.opener</code>, melhorando a segurança.</p>
+<p><code>noreferrer</code>: Evita que o navegador envie informações de referência (referrer) ao site de destino.</p>
+<p><code>ugc</code>: Indica que o link foi gerado por um usuário, como em comentários ou postagens de fóruns.</p>
+<p><code>sponsored</code>: Indica que o link é patrocinado, usado para evitar penalizações no SEO de links pagos.</p>
+<p>Sintaxe básica:</p>
+<p><a href="https://exemplo.com" rel="noopener">Visite o site</a>
+</p>
+<p>No editor de código:</p>
+<pre>
+    &lt;a href="https://exemplo.com" rel="noopener"&gt;Visite o site&lt;/a&gt;
+</pre>
+    
+
+<h2>Usando links internos</h2>
+<p>Os links internos fazem a relação com outra página que está dentro do mesmo servidor. Eles conectam diferentes partes do site sem precisar usar URLs externos.</p>
+
+<h3> Atributos importantes para links internos</h3>
+<p>rel="next"→ Indica que a página linkada é a próxima parte do conteúdo.</p>
+<p>rel="prev"→ Indica que a página linkada é a parte anterior do conteúdo.</p>
+<p>rel="nofollow"→ Indica que os motores de busca não devem seguir esse link.</p>
+<br>
+<p>ex:</p>
+<p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="PAG_INTERNA_1.html" target="_self" rel="next">segunda página</a></p>
+<p>Você também pode acessar a nossa <a href="NOTICIAS/PAG_INTERNA_2.html" rel="next" target="_self">página de noticias.</a> </p>
+<p>No editor de código:</p>
+<pre>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha &lt;a href="PAG_INTERNA_1.html" target="_self" rel="next"&gt;segunda página&lt;/a&gt;</p>
+    <p>Você também pode acessar a nossa &lt;a href="NOTICIAS/PAG_INTERNA_2.html" rel="next" target="_self"&gt;página de notícias.&lt;/a&gt; </p>
+</pre>
+
+<h2></h2>Links para download</h2>
+<ul>
+    <li><a href="LIVRO/Aula 03 _ Elementos Semânticos e Formulários.pdf" download="LIVRO/Aula 03 _ Elementos Semânticos e Formulários.pdf" type="application/pdf">Baixar livro em PDF</a></li>
+    <li><a href="LIVRO/Aula 03 _ Elementos Semânticos e Formulários.zip" download="LIVRO/Aula 03 _ Elementos Semânticos e Formulários.pdf" type="application/pdf">Livro compactado em ZIP</a></li>
+</ul>
+ 
+<a href="" download="" type="applicatio/pdf"></a>
+<h2 id="capitulo3">Capítulo 3 - Introdução ao HTML</h2>
+<a href="#capitulo3" rel="bookmark">Ir para o Capítulo 3</a>

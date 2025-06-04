@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos em HTML</title>
+</head>
+<body>
+    <h1>Inserindo videos hospedados localmente</h1>
+    <hr>
+    <p>Este video está hospedado no meu próprio servidor.</p>
+    <br>
+    <p>Esta é a forma mais simples de inserir um video.</p>
+    <video src="videos/meu-video.MP4.mp4" width="560" controls preload="none" poster="imagem/pexels-rachel-claire-4577442.jpg"></video>
+    <br>
+    <p>Forma mais otimizada de inserir um video.</p>
+    <video width="560" controls preload="none" poster="imagem/pexels-rachel-claire-4577442.jpg" title="JM andando de moto">
+        <source src="videos/meu-video.webm.webm" type="video/webm">
+        <source src="videos/meu-video.mvk.mkv" type="video/x-matroska">
+        <source src="videos/meu-video.mp4.mp4" type="video/mp4">
+        <source src="" type="">
+        
+    </video>
+    <video src=""></video>
+    <p>Se o vídeo não foi aberto, seu navegador não tem compatibilidade. <a href="videos/meu-video.webm.webm" download="meu-video.mp4">Clique aqui para baixar o vídeo.</a>.</p>
+  <br>
+  <h1>Inserindo videos do youtube</h1>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/OzUnqQk4eOg?si=5CZtX1ceYO7MFTXr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

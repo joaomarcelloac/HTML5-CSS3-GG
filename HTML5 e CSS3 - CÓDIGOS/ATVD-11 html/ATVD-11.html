@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens flexíveis</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <hr>
+    <p>Tente abrir esse site em vários dispositivos ou simplesmente aumente o tamanho do seu navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-P.
+        png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-M.png" type="image/png">
+        <source media="" type=""> 
+        <img src="imagens/foto-G.png" alt="imagem flexível tamanho G">
+    </picture>
+<br>
+
+<h1>Reproduzindo áudio</h1>
+<p>vamos aprender a reproduzir áudios em HTML.</p>
+<audio src="midia/audio teste jm.opus" controls ></audio>
+<br>
+<audio preload="none" controls>
+    <source src="midia/audio-teste-jm.opus" type="audio/opus">
+    <source src="midia/audio-teste-jm.mp3" type="audio/mpeg">
+    <source src="midia/audio-teste-jm.ogg" type="audio/ogg">
+    Seu navegador não suporta a reprodução de áudio.
+</audio>
+
+<p>
+    Infelizmente, seu navegador não consegue reproduzir áudio. 
+    <a href="midia/audio-teste-jm.opus" download="teste_de_audio_jm.opus" type="audio/mpeg"> Clique aqui para baixar o arquivo.</a>
+</p>
+
+</html>

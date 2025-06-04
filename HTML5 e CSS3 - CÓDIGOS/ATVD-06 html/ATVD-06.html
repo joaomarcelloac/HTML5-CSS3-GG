@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <hr>
+    <h2>Código-fonte</h2> 
+    <h3>TAG &lt;code&gt;:</h3>
+    <p>A tag &lt;code&gt; é usada para marcar trechos de código dentro de um conteúdo HTML, indicando que o texto nela contido é código de programação. Ela é uma tag semântica , o que significa que além de formatar o texto (geralmente com uma fonte monoespaçada), ela também comunica aos navegadores e ferramentas (como leitores de tela) que aquele conteúdo é um trecho de código.</p>
+    
+    <p>Elemento Inline: É um elemento inline, ou seja, ele não quebra a linha automaticamente e pode ser usado dentro de parágrafos ou outros blocos de texto.</p>
+
+    <p>Uso Típico: Para trechos curtos de código ou comandos dentro de um texto, por exemplo:</p>
+
+    <p>ex: O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p>
+    <br>
+
+    <h3>TAG &lt;pre&gt;:</h3>
+    <p>A tag &lt;pre&gt; é usada para exibir texto pré-formatado. Isso significa que todo o espaçamento, quebras de linha e formatação presentes no código-fonte serão preservados na renderização da página.</p>
+
+    <p>Elemento de Bloco: É um elemento de bloco, ocupando toda a largura disponível e iniciando em uma nova linha.</p>
+
+    <p>Uso Típico:
+        Para exibir blocos de código ou texto onde a formatação é importante, por exemplo:</p>
+    <pre>while True:
+        num = int(input('Digite um número: '))
+        if num % 2 == 0:
+            print(f'O número {num} é PAR.')
+        else:
+            print(f'O número {num} é ÍMPAR.')
+        
+        continuar = str(input('Deseja continuar? [S/N]: ')).upper().strip()
+        if continuar == 'N':
+            print('Finalizando o programa...')
+            break
+        elif continuar != 'S':
+            print('Opção inválida! Tente novamente.')</pre>
+    <h2>Citações simples</h2>
+    <p>A tag &lt;q&gt; é ideal para trechos pequenos ou específicos que não precisam de um grande destaque visual. Como é um elemento inline, a citação se integra facilmente ao parágrafo sem causar quebras de linha.</p>
+    <p>ex: Como diria o pai de um amigo meu: <q>o computador é um burro muito rapido</q></p>
+    <h2>Citações Longas</h2>
+    <p>A tag &lt;blockquote&gt; é utilizada para delimitar uma citação em bloco, ou seja, um trecho de texto que é uma citação extensa de outra fonte. Ela indica que o conteúdo é extraído de outra fonte e, por ser um elemento de bloco, normalmente aparece com uma formatação diferenciada (como recuo) para destacar a citação.</p>
+    <p>Conforme Alexandre Dumas em O Conde de Monte Cristo: </p>
+    <blockquote >
+        A vida é uma tempestade (...) Um dia você está tomando sol e no dia seguinte o mar te lança contra as rochas. O que faz de você um homem é o que você faz quando a tempestade vem.
+    </blockquote>
+    <h3>Paramêtro cite na tag &lt;blockquote&gt; </h3>
+    <p>O parâmetro cite dentro da tag &lt;blockquote&gt; é um atributo opcional que serve para indicar a fonte original da citação. Ele não exibe uma URL diretamente na página, mas fornece uma referência semântica para navegadores e mecanismos de busca.
+    <p></p>
+    <strong>Propósito:</strong> Indicar a origem da citação, ajudando na adição do conteúdo.
+    <p></p>
+    <strong>Semântica:</strong> Melhora a acessibilidade e o SEO, pois os mecanismos de busca podem entender melhor a relação entre o conteúdo e sua fonte.
+    <p></p>
+    <strong>Não Exibido Automaticamente:</strong> O usuário não verá uma URL diretamente no navegador, mas ela pode ser utilizada por bots, assistentes e ferramentas de leitura.
+    </p>
+    <p>ex: <blockquote cite="https://www.exemplo.com/artigo">
+        <p>"A persistência é o caminho do êxito." – Charles Chaplin</p>
+      </blockquote>
+      </p>
+      <p><strong>No edito de código:</strong></p>
+      <p>&lt;blockquote&gt; cite="https://www.exemplo.com/artigo">
+        <p>"A persistência é o caminho do êxito." – Charles Chaplin</p>
+      &lt;/blockquote&gt;</p>
+
+      <h2>Abreviações</h2>
+      <p>A tag &lt;abbr&gt; usada para marcar abreviações e siglas em um documento HTML. Ela melhora a acessibilidade e a experiência do usuário, pois permite exibir o significado da abreviação quando o usuário passa o mouse sobre o texto.
+
+      </p>
+      <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>. Estou adorando!</p>
+      <p><strong>No edito de código:</strong></p>
+      <p>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; e &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;</p>
+      <h2>Texto invertido</h2>
+      <p>Uma tag &lt;bdo&gt; (Bidirecional Override) é usada em HTML para forçar a direção do texto , independentemente da configuração padrão do navegador ou do idioma do conteúdo.</p>
+      <p><p>Texto normal:</p> Estou aprendendo a criar coisas em HTML.</p>
+      <p>Texto com &lt;bdo&gt;: </p><p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+      <h3>Atribuição dir à tag &lt;bdo&gt;</h3>
+      <p>O atributo dir define a direção do texto e aceita dois valores:
+    </p>
+      <p> <strong>ltr (da esquerda para a direita, da esquerda para a direita)</strong> → Direção padrão para idiomas como português e inglês.</p>
+        <p><strong>rtl (direita para esquerda, direita para esquerda)</strong> → Usado para idiomas como árabe e hebraico.</p>
+        
+        <blockquote cite="https://www.exemplo.com/artigo">
+            A simplicidade é a sofisticação máxima.
+        </blockquote>
+        
+</body>
+</html>

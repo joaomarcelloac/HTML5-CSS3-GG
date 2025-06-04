@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <p>&lt;ol&gt;: Representa uma lista numerada ou com uma ordem específica (ordered list - Lista Ordenada).</p>
+    <p>&lt;li&gt;: Os itens da lista são representados por &lt;li&gt; (List Item - Item de Lista).</p>
+    <p>Usa números, letras ou algarismos romanos.</p>
+    <p>Os itens seguem uma sequência lógica.</p>
+    
+    <h3>Listas simples:</h3>
+    <p>ex: 
+    <ol>
+        <li>Uva</li>
+        <li>Banana</li>
+        <li>Maça</li>
+    </ol>
+    </p>
+    <p>Código no editor:</p>
+    <pre>
+    &lt;ol&gt;
+        &lt;li&gt;Uva&lt;/li&gt;
+        &lt;li&gt;Banana&lt;/li&gt;
+        &lt;li&gt;Maça&lt;/li&gt;
+    &lt;/ol&gt;
+    </pre>
+    <p></p>
+    <p>O atributo type define o formato da numeração em listas ordenadas (&lt;ol&gt;). Por padrão, os itens são numerados como 1, 2, 3... , mas podemos modificar isso usando type.</p>
+    <p><h3>Lista numérica padrão (type="1")</h3>
+        &lt;ol type="1"&gt;
+        <ol type="1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <p>Código no editor:</p>
+   <pre>
+    &lt;ol type=&quot;1&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+   </pre>
+        
+        <h3>Lista com letras maiúsculas (type="A")</h3>
+        &lt;ol type="A"&gt;
+        <ol type="A" compact="">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <p>Código no editor:</p>
+   <pre>
+    &lt;ol type=&quot;A&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+   </pre>
+        
+        <h3>Lista com letras minúsculas (type="a")</h3>
+        &lt;ol type="a"&gt;
+        <ol type="a">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <p>Código no editor:</p>
+  <pre>
+    &lt;ol type=&quot;a&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+  </pre>
+        
+        <h3>Lista com algarismos romanos maiúsculos (type="I")</h3>
+        &lt;ol type="I"&gt;
+        <ol type="I">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <p>Código no editor:</p>
+    <pre>
+    &lt;ol type=&quot;I&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+    </pre>
+        <h3>Lista com algarismos romanos minúsculos (type="i")</h3>
+        &lt;ol type="i"&gt;
+        <ol type="i">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <p>Código no editor:</p>
+   <pre>
+    &lt;ol type=&quot;i&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+   </pre>
+        </p>
+        <p></p>
+        <h3>O parâmetro start nas listas ordenadas (&lt;ol&gt;)</h3>
+        <p>O atributo start define o número ou letra inicial da contagem em uma lista ordenada (&lt;ol&gt;).</p>
+        
+        <p>
+            <h3>Lista numérica começando do 5</h3>
+            &lt;ol start="5"&gt;
+            <ol start="5">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol>
+            
+            <h3>Lista com letras começando de C</h3>
+            &lt;ol type="A" start="3"&gt;
+            <ol type="A" start="3">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol>
+            <p>Código no editor:</p>
+    <pre>   
+    &lt;ol type=&quot;A&quot; start=&quot;3&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ol&gt;
+    </pre>
+            
+            <h3>Lista com algarismos romanos começando do III</h3>
+            &lt;ol type="I" start="3"&gt;
+            <ol type="I" start="3">
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ol>
+            <p>Código no editor:</p>
+    <pre>
+    &lt;ol type=&quot;I&quot; start=&quot;3&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;/ol&gt;   
+    </pre>
+    </p>
+    <h3>Listas com sub-listas</h3>
+    <ol>
+    <li>
+        Frutas
+        <ol>
+            <li>Banana</li>
+            <li>Maçã</li>
+            <li>Melancia</li>
+            <li>Maracujá</li>
+            <li>Uva</li>
+        </ol>
+    </li>
+    <li>
+        Legumes
+        <ol>
+            <li>Abobrinha</li>
+            <li>Ervilha</li>
+            <li>Berinjela</li>
+            <li>Aspargos</li>
+            <li>Beterraba</li>
+        </ol>
+    </li>
+    <li>
+        Verduras
+        <ol>
+            <li>Alface</li>
+            <li>Acelga</li>
+            <li>Coentro</li>
+            <li>Espinafre</li>
+            <li>Repolho</li>
+        </ol>
+    </li>
+    </ol>
+    <p>Código no editor:</p>
+    <pre>
+    &lt;/p&gt;
+    &lt;h3&gt;Listas com sub-listas&lt;/h3&gt;
+    &lt;ol&gt;
+        &lt;li&gt;
+            Frutas
+            &lt;ol&gt;
+                &lt;li&gt;Banana&lt;/li&gt;
+                &lt;li&gt;Maçã&lt;/li&gt;
+                &lt;li&gt;Melancia&lt;/li&gt;
+                &lt;li&gt;Maracujá&lt;/li&gt;
+                &lt;li&gt;Uva&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            Legumes
+            &lt;ol&gt;
+                &lt;li&gt;Abobrinha&lt;/li&gt;
+                &lt;li&gt;Ervilha&lt;/li&gt;
+                &lt;li&gt;Berinjela&lt;/li&gt;
+                &lt;li&gt;Aspargos&lt;/li&gt;
+                &lt;li&gt;Beterraba&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            Verduras
+            &lt;ol&gt;
+                &lt;li&gt;Alface&lt;/li&gt;
+                &lt;li&gt;Acelga&lt;/li&gt;
+                &lt;li&gt;Coentro&lt;/li&gt;
+                &lt;li&gt;Espinafre&lt;/li&gt;
+                &lt;li&gt;Repolho&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+    </pre>
+    <h2>Listas não Ordenadas</h2>
+    <p>&lt;ul&gt;: Representa uma lista não ordenada (Unordered List - Lista Não Ordenada).</p>
+    <p>&lt;li&gt;: Os itens da lista são representados por &lt;li&gt; (List Item - Item de Lista).</p>
+    <p>ex:
+    <ul>
+        <li>Uva</li>
+        <li>Banana</li>
+        <li>Maça</li>
+    </ul></p>
+
+    <p>Código no editor:</p>
+    <pre>
+    &lt;ul&gt;
+        &lt;li&gt;Uva&lt;/li&gt;
+        &lt;li&gt;Banana&lt;/li&gt;
+        &lt;li&gt;Maça&lt;/li&gt;
+    &lt;/ul&gt;&lt;/p&gt; 
+    </pre>
+
+    <p>
+        <h3>Lista com marcador padrão (disc)</h3>
+        &lt;ul type="disc"&gt;
+        <ul type="disc">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <p>Código no editor:</p>
+    <pre>
+    &lt;ul type=&quot;disc&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;  
+    </pre>
+        
+        <h3>Lista com círculo vazio (circle)</h3>
+        &lt;ul type="circle"&gt;
+        <ul type="circle">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <p>Código no editor:</p>
+    <pre>
+    &lt;ul type=&quot;circle&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;    
+    </pre>
+        
+        <h3>Lista com quadrado (square)</h3>
+        &lt;ul type="square"&gt;
+        <ul type="square">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <p>Código no editor:</p>
+    <pre>
+    &lt;ul type=&quot;square&quot;&gt;
+        &lt;li&gt;Item 1&lt;/li&gt;
+        &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;   
+    </pre>
+        </p>
+    <h2>Juntando listas versão 1.0</h2>
+    <h3>Lista não ordenada dentro de uma lista ordenada</h3>
+    <ol>
+        <li>Frutas favoritas
+            <ul type="disc">
+                <li>Banana</li>
+                <li>Maçã</li>
+                <li>Uva</li>
+            </ul>
+        </li>
+        <li>Legumes mais consumidos
+            <ul type="square">
+                <li>Cenoura</li>
+                <li>Abobrinha</li>
+                <li>Beterraba</li>
+            </ul>
+        </li>
+        <li> Cereais mais comidos
+            <ul type="circle">
+                <li>Arroz</li>
+                <li>Milho</li>
+                <li>Trigo</li>
+                <li>Cevada</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <p>Código no Editor:</p>
+<pre>
+&lt;ol&gt;
+    &lt;li&gt;Frutas favoritas
+        &lt;ul type=&quot;disc&quot;&gt;
+            &lt;li&gt;Banana&lt;/li&gt;
+            &lt;li&gt;Maçã&lt;/li&gt;
+            &lt;li&gt;Uva&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Legumes mais consumidos
+        &lt;ul type=&quot;square&quot;&gt;
+            &lt;li&gt;Cenoura&lt;/li&gt;
+            &lt;li&gt;Abobrinha&lt;/li&gt;
+            &lt;li&gt;Beterraba&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Cereais mais comidos
+        &lt;ul type=&quot;circle&quot;&gt;
+            &lt;li&gt;Arroz&lt;/li&gt;
+            &lt;li&gt;Milho&lt;/li&gt;
+            &lt;li&gt;Trigo&lt;/li&gt;
+            &lt;li&gt;Cevada&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+
+</pre>
+
+<h2>Lista de Definições</h2>
+<p>As listas de definições em HTML são usadas para exibir termos e suas respectivas definições, funcionando como um glossário ou um conjunto de especificações. Elas são representadas pelas seguintes tags:</p>
+<p>Estrutura:</p>
+<p>&lt;dl&gt; (Lista de definições): Defina uma lista de definições.</p>
+<p>&lt;dt&gt; (Termo de Definição): Define o termo a ser explicado.</p>
+<p>&lt;dd&gt; (Descrição da Definição): Defina a descrição do termo.</p>
+<p>ex:</p>
+<dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação usada para estruturar páginas web.</dd>
+
+    <dt>CSS</dt>
+    <dd>Linguagem de estilo utilizada para definir o design das páginas web.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Linguagem de programação usada para adicionar interatividade às páginas web.</dd>
+</dl>
+<p>Código no Editor:</p>
+
+<pre>
+&lt;dl&gt;  
+    &lt;dt&gt;HTML&lt;/dt&gt;  
+    &lt;dd&gt;Linguagem de marcação usada para estruturar páginas web.&lt;/dd&gt;  
+
+    &lt;dt&gt;CSS&lt;/dt&gt;  
+    &lt;dd&gt;Linguagem de estilo utilizada para definir o design das páginas web.&lt;/dd&gt;  
+
+    &lt;dt&gt;JavaScript&lt;/dt&gt;  
+    &lt;dd&gt;Linguagem de programação usada para adicionar interatividade às páginas web.&lt;/dd&gt;  
+&lt;/dl&gt;
+</pre>
+
+
+</table>
+</body>
+</html>
