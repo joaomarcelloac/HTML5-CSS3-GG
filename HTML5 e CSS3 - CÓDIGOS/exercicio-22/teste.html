@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Completo de Radial Gradient</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f7f6;
+            display: flex;
+            flex-wrap: wrap; /* Permite que as divs quebrem para a próxima linha */
+            gap: 25px; /* Espaço entre as divs */
+            justify-content: center; /* Centraliza as divs horizontalmente */
+            align-items: flex-start; /* Alinha as divs no topo */
+        }
+
+        .gradient-box {
+            width: 300px;
+            height: 200px;
+            border: 2px solid #a0a0a0;
+            border-radius: 8px; /* Cantos arredondados para um visual mais suave */
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Coloca o título na parte inferior */
+            align-items: center;
+            padding-bottom: 10px; /* Espaço para o título */
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            position: relative; /* Para posicionar o título se for necessário */
+        }
+
+        .gradient-box h3 {
+            margin: 0;
+            padding: 5px 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para o título */
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* --- 1. Gradiente Radial Básico (Padrão: ellipse at center) --- */
+        .gradient-1 {
+            background-image: radial-gradient(white, steelblue);
+        }
+
+        /* --- 2. Forma Circular --- */
+        .gradient-2 {
+            background-image: radial-gradient(circle, #ffe0b2, #ff8c00); /* Amarelo claro para laranja */
+        }
+
+        /* --- 3. Posição Personalizada --- */
+        .gradient-3 {
+            background-image: radial-gradient(at top left, #f1f1f1, #221b82); /* Do canto superior esquerdo */
+        }
+
+        /* --- 4. Tamanho: closest-corner --- */
+        .gradient-4 {
+            /* O gradiente se estende até o canto mais próximo da posição (neste caso, center) */
+            background-image: radial-gradient(circle closest-corner at center, #d8bfd8, #800080); /* Roxo claro para roxo */
+        }
+
+        /* --- 5. Tamanho: farthest-corner (Padrão) e Posição Customizada --- */
+        .gradient-5 {
+            /* O gradiente se estende até o canto mais distante da posição (top right) */
+            background-image: radial-gradient(at top right, #fffacd, #daa520); /* Amarelo ouro do canto superior direito */
+        }
+
+        /* --- 6. Elipse com Raio Específico --- */
+        .gradient-6 {
+            /* 120px de largura, 80px de altura para a elipse */
+            background-image: radial-gradient(120px 80px at center, #b0e0e6, #4682b4); /* Azul claro para azul aço */
+        }
+
+        /* --- 7. Gradiente com Paradas de Cor Definidas --- */
+        .gradient-7 {
+            background-image: radial-gradient(#FFD700 0%, #FF8C00 30%, #FF4500 70%, #8B0000 100%);
+            /* Ouro -> Laranja Escuro -> Laranja avermelhado -> Vermelho Escuro */
+        }
+
+        /* --- 8. Gradiente com Faixas Sólidas (Paradas no Mesmo Ponto) --- */
+        .gradient-8 {
+            background-image: radial-gradient(circle,
+                red 0%, red 25%, /* Vermelho até 25% */
+                white 25%, white 50%, /* Branco de 25% a 50% */
+                blue 50%, blue 75%, /* Azul de 50% a 75% */
+                black 75%, black 100% /* Preto de 75% a 100% */
+            );
+        }
+
+        /* --- 9. Gradiente com Transparência --- */
+        .gradient-9 {
+            background-image: radial-gradient(circle at center,
+                rgba(255, 255, 255, 0.8) 0%, /* Branco semi-transparente no centro */
+                rgba(255, 255, 255, 0) 70% /* Totalmente transparente a partir de 70% */
+            ),
+            linear-gradient(to right, #6a11cb, #2575fc); /* Fundo linear para ver a transparência */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gradient-box gradient-1">
+        <h3>1. Básico (white, steelblue)</h3>
+    </div>
+
+    <div class="gradient-box gradient-2">
+        <h3>2. Forma: circle (yellow, orange)</h3>
+    </div>
+
+    <div class="gradient-box gradient-3">
+        <h3>3. Posição: at top left</h3>
+    </div>
+
+    <div class="gradient-box gradient-4">
+        <h3>4. Tamanho: closest-corner</h3>
+    </div>
+
+    <div class="gradient-box gradient-5">
+        <h3>5. Tamanho: farthest-corner (at top right)</h3>
+    </div>
+
+    <div class="gradient-box gradient-6">
+        <h3>6. Elipse (120px 80px)</h3>
+    </div>
+
+    <div class="gradient-box gradient-7">
+        <h3>7. Com Paradas de Cor (%)</h3>
+    </div>
+
+    <div class="gradient-box gradient-8">
+        <h3>8. Faixas Sólidas (Círculo)</h3>
+    </div>
+
+    <div class="gradient-box gradient-9">
+        <h3>9. Com Transparência (sobre linear)</h3>
+    </div>
+
+</body>
+</html>
