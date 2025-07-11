@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim escolar (Tabela)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-weight: bolder;
+            font-size: 1.3em;
+            padding-bottom: 10px;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+
+        .estilo1 {
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+        }
+
+        .estilonum {
+            text-align: center;
+        }
+
+        .estilonum2 {
+            background-color: grey;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        tr.destaque {
+            background-color: grey;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Atividade 04 (Tabela Completa)</h2>
+<table class="atvd3">
+<caption>
+    Boletim Escolar
+</caption>
+<thead>
+    <tr class="destaque">
+        <th scope="col" rowspan="2">Área</th>
+        <th scope="col" rowspan="2">Disciplinas</th>
+        <th scope="colgroup" colspan="2">Notas</th>
+        <th scope="col" rowspan="2">Média</th>
+    </tr>
+
+    <tr class="destaque">
+        <th scope="col">Nota 1</th>
+        <th scope="col">Nota 2</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th scope="colgroup" rowspan="4">Exatas</th>
+        <td>Mátematica</td>
+        <td class="estilonum" >0.0</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+    </tr>
+    <tr>
+        <td>Fisica</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+    </tr>
+    <tr>
+        <td>Quimica</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+    </tr>
+    <tr>
+        <td>Biologia</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+    </tr>
+    <tr>
+        <td class="estilo1" colspan="4" scope="col">Média de Exatas</td>
+        <td class="estilonum2">0.0</td>
+    </tr>
+    <tr>
+        <th scope="colgroup" rowspan="2">Humanas</th>
+        <td>Historia</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+    </tr>
+    <tr>
+        <td>Geografia</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+        <td class="estilonum">0.0</td>
+    </tr>
+    <tr>
+        <td scope="col" class="estilo1" colspan="4">Média de Humanas</td>
+        <td class="estilonum2">0.0</td>
+    </tr>
+</tbody>
+
+</table>
+</body>
+</html>
